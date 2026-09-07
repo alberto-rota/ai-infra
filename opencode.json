@@ -1327,7 +1327,7 @@
   "mcp": {
     "notion": {
       "type": "remote",
-      "url": "https://api.notion.com/v1"
+      "url": "https://mcp.notion.com/mcp"
     },
     "gmail": {
       "type": "local",
