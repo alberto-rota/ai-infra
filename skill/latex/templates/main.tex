@@ -1,0 +1,74 @@
+\documentclass[11pt]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+
+\title{TITLE PLACEHOLDER}
+\author{Author Name}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Summarize the problem, the approach, and the main result in a few sentences.
+\end{abstract}
+
+\section{Introduction}\label{sec:intro}
+
+Introduce the problem and state your contributions. Prior work can be cited
+with \citep{sample2026} for parenthetical citations or \citet{sample2026} for
+textual ones.
+
+\section{Methods}\label{sec:methods}
+
+Describe the approach. Equations go in the \texttt{equation} environment:
+
+\begin{equation}\label{eq:main}
+  f(x) = \int_{-\infty}^{\infty} e^{-t^2}\,\mathrm{d}t
+\end{equation}
+
+Equation~\eqref{eq:main} is referenced with \verb|\eqref|.
+
+\section{Results}\label{sec:results}
+
+Tables use \texttt{booktabs} rules:
+
+\begin{table}[htbp]
+  \centering
+  \begin{tabular}{lcc}
+    \toprule
+    Method & Metric A & Metric B \\
+    \midrule
+    Baseline & 0.50 & 0.61 \\
+    Ours     & \textbf{0.87} & \textbf{0.92} \\
+    \bottomrule
+  \end{tabular}
+  \caption{Comparison against the baseline.}
+  \label{tab:comparison}
+\end{table}
+
+Figures go in \texttt{figures/} and are included like this:
+
+\begin{figure}[htbp]
+  \centering
+  % \includegraphics[width=\linewidth]{figures/example.pdf}
+  \caption{An example figure (uncomment \texttt{includegraphics} once added).}
+  \label{fig:example}
+\end{figure}
+
+\section{Conclusion}\label{sec:conclusion}
+
+Restate the contribution and outline future work.
+
+\bibliographystyle{plainnat}
+\bibliography{refs}
+
+\end{document}
